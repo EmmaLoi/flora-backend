@@ -5,7 +5,14 @@
     "version": "1.0.0",
     "description": "REST API for Flora bouquets project"
   },
-  "servers": [{ "url": "http://localhost:3000" }],
+  "servers": [
+    {
+      "url": "https://flora-backend-eao9.onrender.com"
+    },
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
   "tags": [{ "name": "Bouquets" }, { "name": "Feedback" }],
   "paths": {
     "/api/bouquets": {
@@ -198,10 +205,16 @@
         "properties": {
           "id": { "type": "integer", "example": 1 },
           "title": { "type": "string", "example": "Peach Meadow" },
-          "description": { "type": "string", "example": "Fresh bouquet in peach colors." },
+          "description": {
+            "type": "string",
+            "example": "Fresh bouquet in peach colors."
+          },
           "price": { "type": "number", "example": 55 },
           "favorite": { "type": "boolean", "example": false },
-          "photoURL": { "type": "string", "example": "/photos/peach-meadow.webp" },
+          "photoURL": {
+            "type": "string",
+            "example": "/photos/peach-meadow.webp"
+          },
           "createdAt": { "type": "string", "format": "date-time" },
           "updatedAt": { "type": "string", "format": "date-time" }
         }
@@ -211,7 +224,10 @@
         "required": ["title", "description", "price"],
         "properties": {
           "title": { "type": "string", "example": "Peach Meadow" },
-          "description": { "type": "string", "example": "Fresh bouquet in peach colors." },
+          "description": {
+            "type": "string",
+            "example": "Fresh bouquet in peach colors."
+          },
           "price": { "type": "number", "example": 55 },
           "favorite": { "type": "boolean", "example": false }
         }
@@ -221,10 +237,12 @@
         "minProperties": 1,
         "properties": {
           "title": { "type": "string", "example": "Peach Meadow" },
-          "description": { "type": "string", "example": "Updated description." },
+          "description": {
+            "type": "string",
+            "example": "Updated description."
+          },
           "price": { "type": "number", "example": 60 },
-          "favorite": { "type": "boolean", "example": true },
-          "photoURL": { "type": "string", "example": "/photos/peach-meadow.webp" }
+          "favorite": { "type": "boolean", "example": true }
         }
       },
       "FavoriteUpdate": {
