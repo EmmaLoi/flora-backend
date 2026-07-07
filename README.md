@@ -20,13 +20,6 @@ Install dependencies:
 npm install
 ```
 
-Create a `.env` file in the project root:
-
-```env
-PORT=3000
-DATABASE_URL=your_database_url
-```
-
 ## Run the project
 
 Development mode:
@@ -57,9 +50,9 @@ npm run seed:feedback
 
 ## API Documentation
 
-Swagger UI is available at:
+Swagger UI:
 
-```
+```text
 http://localhost:3000/api-docs
 ```
 
