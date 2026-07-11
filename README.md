@@ -1,6 +1,6 @@
 # Flora Backend
 
-Backend for the Flora project built with Node.js, Express, PostgreSQL, and Sequelize.
+Backend for the Flora flower shop project built with Node.js, Express, PostgreSQL, and Sequelize.
 
 ## Technologies
 
@@ -11,6 +11,7 @@ Backend for the Flora project built with Node.js, Express, PostgreSQL, and Seque
 - Joi
 - Multer
 - Swagger
+- Gravatar
 
 ## Installation
 
@@ -36,24 +37,36 @@ npm start
 
 ## Seed database
 
-Bouquets:
+Seed bouquets:
 
 ```bash
 npm run seed:bouquets
 ```
 
-Feedback:
+Seed bestsellers:
+
+```bash
+npm run seed:bestsellers
+```
+
+Seed feedback:
 
 ```bash
 npm run seed:feedback
 ```
 
-## API Documentation
+## API documentation
 
-Swagger UI:
+Local Swagger UI:
 
 ```text
 http://localhost:3000/api-docs
+```
+
+Deployed Swagger UI:
+
+```text
+https://flora-backend-eao9.onrender.com/api-docs
 ```
 
 ## Endpoints
@@ -68,6 +81,15 @@ http://localhost:3000/api-docs
 - PATCH `/api/bouquets/:id/favorite`
 - PATCH `/api/bouquets/:id/photo`
 
+### Bestsellers
+
+- GET `/api/bestsellers`
+- GET `/api/bestsellers/:id`
+
 ### Feedback
 
 - GET `/api/feedback`
+
+### Orders
+
+- POST `/api/orders`

@@ -4,6 +4,8 @@ import { connectDB } from "./config/db.js";
 import sequelize from "./config/db.js";
 import "./models/Bouquet.js";
 import "./models/Feedback.js";
+import "./models/Bestseller.js";
+import "./models/Order.js";
 
 dotenv.config();
 

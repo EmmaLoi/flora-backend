@@ -5,6 +5,8 @@ import { createRequire } from "module";
 import swaggerUi from "swagger-ui-express";
 import bouquetsRouter from "./routes/bouquetsRoutes.js";
 import feedbackRouter from "./routes/feedbackRoutes.js";
+import bestsellersRouter from "./routes/bestsellersRoutes.js";
+import ordersRouter from "./routes/ordersRoutes.js";
 
 const require = createRequire(import.meta.url);
 const swaggerDocument = require("./swagger.json");
@@ -24,6 +26,8 @@ app.get("/", (req, res) => {
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use("/api/bouquets", bouquetsRouter);
 app.use("/api/feedback", feedbackRouter);
+app.use("/api/bestsellers", bestsellersRouter);
+app.use("/api/orders", ordersRouter);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });

@@ -8,7 +8,8 @@
     "start": "node server.js",
     "dev": "nodemon server.js",
     "seed:bouquets": "node seed/seedBouquets.js",
-    "seed:feedback": "node seed/seedFeedback.js"
+    "seed:feedback": "node seed/seedFeedback.js",
+    "seed:bestsellers": "node seed/seedBestsellers.js"
   },
   "keywords": [],
   "author": "",
